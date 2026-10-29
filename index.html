@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - Pomodoro & Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fa-solid fa-clock"></i> FocusFlow</h1>
+            <p>Boost your productivity with focused intervals</p>
+        </header>
+
+        <!-- Mode Selector Tabs -->
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="pomodoro">Pomodoro</button>
+            <button class="mode-btn" data-mode="shortBreak">Short Break</button>
+            <button class="mode-btn" data-mode="longBreak">Long Break</button>
+        </div>
+
+        <!-- Timer Card -->
+        <div class="timer-card">
+            <div class="time-display" id="time-display">25:00</div>
+            <div class="timer-controls">
+                <button id="start-btn" class="primary-btn"><i class="fa-solid fa-play"></i> Start</button>
+                <button id="reset-btn" class="secondary-btn"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+            </div>
+        </div>
+
+        <!-- Tasks Section -->
+        <div class="tasks-section">
+            <div class="tasks-header">
+                <h3><i class="fa-solid fa-list-check"></i> Tasks</h3>
+                <span id="task-counter">0/0 completed</span>
+            </div>
+            
+            <form id="task-form" class="task-form">
+                <input type="text" id="task-input" placeholder="What are you working on?" autocomplete="off" required>
+                <button type="submit" class="add-btn"><i class="fa-solid fa-plus"></i></button>
+            </form>
+
+            <ul id="task-list" class="task-list">
+                <!-- Dynamically populated tasks -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
